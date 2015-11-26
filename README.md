@@ -1,2 +1,2 @@
-# modernized
-Playground for bleeding edge JS
+# Modernized
+Playground for bleeding edge JavaScript stuff

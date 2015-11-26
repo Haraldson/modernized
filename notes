@@ -1,0 +1,11 @@
+function highlander(module) {
+    return fs.realpathSync(path.join(__dirname, 'node_modules', module));
+}
+
+...
+
+resolve: {
+    alias: {
+        backbone: highlander('backbone')
+    }
+}
