@@ -1,11 +1,12 @@
+// Function argument destructuring (for defaults) + template strings
 function ohlala({ given = 'Hein Haraldson', family = 'Berg' } = {})
 {
     // Sing name with -v Rihanna
-    console.log(given, family);
+    return `Hi there, ${given} ${family}!`;
 }
+console.log(ohlala({ given: 'Fleske' }));
 
-ohlala({ given: 'Fleske' });
-
+// Destructuring of a collecton to named parameters
 let collection = [
     { name: 'Monday' },
     { name: 'Tuesday' },
@@ -16,5 +17,5 @@ let collection = [
     { name: 'Sunday' }
 ];
 
-let [monday, tuesday, wednesday, thursday, friday, saturday, sunday] = collection;
-console.log(monday, sunday);
+let [monday, tuesday, ...rest] = collection;
+console.log(monday, tuesday, rest);
